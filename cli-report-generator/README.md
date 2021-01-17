@@ -4,7 +4,7 @@ CLI program for processing a `json` according to [this](https://gist.github.com/
 *random* generated specification. This program was done following the specification and 
 requirements of the challenge.
 
-It spits out in the standard output an alike report as can be seen in [this file](/output.txt).
+It spits out in the standard output an alike report as can be seen in [this file](output.txt).
 
 ## Environment
 
