@@ -1,0 +1,203 @@
+Enero:
+	51	Transacciones pendiente
+	36	Transacciones bloqueadas
+
+	$9865.30	Ingresos
+	$10069.19	Gastos
+
+		Entretenimiento	%26.47
+		Alimentacion	%16.18
+		Servicios	%13.97
+		Retiros en cajero	%10.29
+		Otros	%10.29
+		Transferencias	%9.56
+		Transporte	%8.82
+		Hogar	%4.41
+
+
+Febrero:
+	47	Transacciones pendiente
+	60	Transacciones bloqueadas
+
+	$8740.37	Ingresos
+	$9165.47	Gastos
+
+		Entretenimiento	%33.33
+		Alimentacion	%17.01
+		Retiros en cajero	%14.97
+		Transferencias	%10.20
+		Transporte	%8.16
+		Otros	%6.80
+		Hogar	%4.76
+		Servicios	%4.76
+
+
+Marzo:
+	47	Transacciones pendiente
+	49	Transacciones bloqueadas
+
+	$2878.05	Ingresos
+	$11448.20	Gastos
+
+		Entretenimiento	%31.29
+		Transferencias	%13.61
+		Alimentacion	%12.93
+		Retiros en cajero	%11.56
+		Servicios	%10.20
+		Otros	%9.52
+		Transporte	%7.48
+		Hogar	%3.40
+
+
+Abril:
+	44	Transacciones pendiente
+	39	Transacciones bloqueadas
+
+	$1361.60	Ingresos
+	$7749.82	Gastos
+
+		Entretenimiento	%26.27
+		Retiros en cajero	%18.64
+		Transferencias	%15.25
+		Alimentacion	%13.56
+		Otros	%10.17
+		Servicios	%6.78
+		Transporte	%5.93
+		Hogar	%3.39
+
+
+Mayo:
+	39	Transacciones pendiente
+	39	Transacciones bloqueadas
+
+	$3972.31	Ingresos
+	$5801.41	Gastos
+
+		Entretenimiento	%31.48
+		Alimentacion	%15.74
+		Retiros en cajero	%12.04
+		Servicios	%9.26
+		Transferencias	%9.26
+		Transporte	%9.26
+		Otros	%7.41
+		Hogar	%5.56
+
+
+Junio:
+	41	Transacciones pendiente
+	45	Transacciones bloqueadas
+
+	$0.00	Ingresos
+	$8585.54	Gastos
+
+		Entretenimiento	%34.92
+		Retiros en cajero	%14.29
+		Transferencias	%13.49
+		Transporte	%11.11
+		Alimentacion	%8.73
+		Otros	%7.14
+		Servicios	%5.56
+		Hogar	%4.76
+
+
+Julio:
+	37	Transacciones pendiente
+	42	Transacciones bloqueadas
+
+	$5237.85	Ingresos
+	$6379.04	Gastos
+
+		Entretenimiento	%29.13
+		Retiros en cajero	%20.39
+		Transferencias	%15.53
+		Alimentacion	%12.62
+		Servicios	%8.74
+		Otros	%7.77
+		Transporte	%3.88
+		Hogar	%1.94
+
+
+Agosto:
+	30	Transacciones pendiente
+	38	Transacciones bloqueadas
+
+	$0.00	Ingresos
+	$7101.84	Gastos
+
+		Entretenimiento	%20.79
+		Transferencias	%14.85
+		Alimentacion	%13.86
+		Retiros en cajero	%13.86
+		Otros	%12.87
+		Transporte	%12.87
+		Servicios	%9.90
+		Hogar	%0.99
+
+
+Septiembre:
+	47	Transacciones pendiente
+	43	Transacciones bloqueadas
+
+	$1077.46	Ingresos
+	$10824.14	Gastos
+
+		Entretenimiento	%31.43
+		Transferencias	%17.14
+		Retiros en cajero	%14.29
+		Alimentacion	%10.71
+		Otros	%8.57
+		Servicios	%7.86
+		Transporte	%6.43
+		Hogar	%3.57
+
+
+Octubre:
+	45	Transacciones pendiente
+	37	Transacciones bloqueadas
+
+	$5492.27	Ingresos
+	$9607.00	Gastos
+
+		Entretenimiento	%26.15
+		Alimentacion	%14.62
+		Retiros en cajero	%14.62
+		Servicios	%12.31
+		Transferencias	%12.31
+		Transporte	%9.23
+		Hogar	%6.92
+		Otros	%3.85
+
+
+Noviembre:
+	34	Transacciones pendiente
+	31	Transacciones bloqueadas
+
+	$0.00	Ingresos
+	$7306.89	Gastos
+
+		Entretenimiento	%33.33
+		Retiros en cajero	%17.14
+		Alimentacion	%12.38
+		Transferencias	%11.43
+		Servicios	%9.52
+		Transporte	%8.57
+		Otros	%5.71
+		Hogar	%1.90
+
+
+Diciembre:
+	40	Transacciones pendiente
+	52	Transacciones bloqueadas
+
+	$2706.64	Ingresos
+	$9077.82	Gastos
+
+		Entretenimiento	%25.18
+		Transferencias	%16.55
+		Retiros en cajero	%12.95
+		Alimentacion	%12.23
+		Servicios	%11.51
+		Otros	%9.35
+		Transporte	%7.19
+		Hogar	%5.04
+
