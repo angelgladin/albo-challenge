@@ -9,6 +9,10 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.1"
 
+    buildFeatures {
+        dataBinding true
+    }
+
     defaultConfig {
         applicationId "me.angelgladin"
         minSdkVersion 24
@@ -35,7 +39,9 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def nav_version = "2.3.2"
+    def paging_version = "2.1.2"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     // Coroutines
@@ -46,6 +52,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation "androidx.paging:paging-runtime:$paging_version"
 
     // Navigation Component
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
