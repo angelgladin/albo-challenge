@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="me.angelgladin.ui.main.MainFragment"
+        android:name="me.angelgladin.master.ui.MasterFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
@@ -13,6 +13,6 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="me.angelgladin.DetailFragment"
+        android:name="me.angelgladin.detail.ui.DetailFragment"
         android:label="DetailFragment" />
 </navigation>

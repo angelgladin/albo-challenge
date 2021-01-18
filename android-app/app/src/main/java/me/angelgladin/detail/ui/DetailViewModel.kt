@@ -1,7 +1,7 @@
-package me.angelgladin.ui.main
+package me.angelgladin.detail.ui
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class DetailViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }
