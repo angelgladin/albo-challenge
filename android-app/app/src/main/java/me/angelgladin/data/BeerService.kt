@@ -10,9 +10,9 @@ interface BeerService {
     suspend fun getBeers(
         @Query("page") page: String,
         @Query("per_page") perPage: String
-    ): Response<Beer>
+    ): Response<List<Beer>>
 
     companion object {
-        const val BASE_URL = "https://api.punkapi.com/v2/beers"
+        const val BASE_URL = "https://api.punkapi.com/v2/"
     }
 }
