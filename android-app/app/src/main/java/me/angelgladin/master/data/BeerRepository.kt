@@ -1,15 +1,23 @@
 package me.angelgladin.master.data
 
-import me.angelgladin.data.resultLiveData
+import androidx.lifecycle.LiveData
+import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
+import kotlinx.coroutines.CoroutineScope
+import me.angelgladin.data.entity.Beer
 import javax.inject.Inject
 
 class BeerRepository @Inject constructor(
     private val dao: BeerDao,
-    private val remoteSource: BeerRemoteSource
+    private val remoteDataSource: BeerRemoteDataSource
 ) {
 
-    val beers = resultLiveData(
-        databaseQuery = { dao.getBeers() },
-        networkCall = { remoteSource.fetchData() },
-        saveCallResult = { dao.insertAll(it) })
+    fun observeBeers(coroutineScope: CoroutineScope): LiveData<PagedList<Beer>> {
+        val dataSourceFactory = BeerPageDataSourceFactory(dao, remoteDataSource, coroutineScope)
+
+        return LivePagedListBuilder(
+            dataSourceFactory,
+            BeerPageDataSourceFactory.pagedListConfig()
+        ).build()
+    }
 }

@@ -7,8 +7,12 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import me.angelgladin.data.AppDatabase
 import me.angelgladin.data.BeerService
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
@@ -20,8 +24,11 @@ object AppModule {
     @Provides
     fun provideRetrofit(moshi: Moshi): Retrofit = Retrofit.Builder()
         .baseUrl(BeerService.BASE_URL)
+            // TODO: ponerlo mejor
+        .client(OkHttpClient.Builder().addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }).build())
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
+
 
     @Provides
     fun providesMoshi(): Moshi = Moshi.Builder().build()
@@ -36,5 +43,8 @@ object AppModule {
 
     @Provides
     fun provideBeerDao(db : AppDatabase) = db.beersDao()
+
+    @Provides
+    fun provideCoroutineScopeIO() = CoroutineScope(Dispatchers.IO)
 
 }
