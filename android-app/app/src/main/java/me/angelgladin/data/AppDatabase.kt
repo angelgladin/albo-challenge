@@ -19,7 +19,6 @@ abstract class AppDatabase : RoomDatabase() {
 
     companion object {
 
-        // For Singleton instantiation
         @Volatile
         private var instance: AppDatabase? = null
 
@@ -30,8 +29,7 @@ abstract class AppDatabase : RoomDatabase() {
         }
 
         private fun buildDatabase(context: Context): AppDatabase {
-            Log.e("appdatabase", "databasecreated1")
-
+            Log.i("AppDatabase", "databasecreated1")
             return Room.databaseBuilder(context, AppDatabase::class.java, "beers-db")
                 .build()
         }

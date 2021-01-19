@@ -22,7 +22,7 @@ class BeerPageDataSourceFactory @Inject constructor(
         return source
     }
 
-    companion   object {
+    companion  object {
         private const val PAGE_SIZE = 20
 
         fun pagedListConfig() = PagedList.Config.Builder()

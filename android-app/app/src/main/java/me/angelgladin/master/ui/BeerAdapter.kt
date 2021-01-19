@@ -62,15 +62,17 @@ class BeerAdapter :
         }
     }
 
-    class DiffCallback : DiffUtil.ItemCallback<Beer>() {
-        override fun areItemsTheSame(oldItem: Beer, newItem: Beer): Boolean {
-            return oldItem.id == newItem.id
-        }
+    companion object {
+        class DiffCallback : DiffUtil.ItemCallback<Beer>() {
+            override fun areItemsTheSame(oldItem: Beer, newItem: Beer): Boolean {
+                return oldItem.id == newItem.id
+            }
 
-        override fun areContentsTheSame(oldItem: Beer, newItem: Beer): Boolean {
-            return oldItem.id == newItem.id
-        }
+            override fun areContentsTheSame(oldItem: Beer, newItem: Beer): Boolean {
+                return oldItem.id == newItem.id
+            }
 
+        }
     }
 
 }

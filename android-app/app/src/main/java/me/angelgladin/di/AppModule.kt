@@ -22,13 +22,16 @@ import javax.inject.Singleton
 object AppModule {
     @Singleton
     @Provides
-    fun provideRetrofit(moshi: Moshi): Retrofit = Retrofit.Builder()
+    fun provideRetrofit(moshi: Moshi, okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         .baseUrl(BeerService.BASE_URL)
-            // TODO: ponerlo mejor
-        .client(OkHttpClient.Builder().addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }).build())
-        .addConverterFactory(MoshiConverterFactory.create())
+        .client(okHttpClient)
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
+    @Provides
+    fun okHttpClient() = OkHttpClient.Builder().addInterceptor(HttpLoggingInterceptor().apply {
+        level = HttpLoggingInterceptor.Level.BODY
+    }).build()
 
     @Provides
     fun providesMoshi(): Moshi = Moshi.Builder().build()
@@ -42,7 +45,7 @@ object AppModule {
     fun provideDb(@ApplicationContext appContext: Context) = AppDatabase.getInstance(appContext)
 
     @Provides
-    fun provideBeerDao(db : AppDatabase) = db.beersDao()
+    fun provideBeerDao(db: AppDatabase) = db.beersDao()
 
     @Provides
     fun provideCoroutineScopeIO() = CoroutineScope(Dispatchers.IO)

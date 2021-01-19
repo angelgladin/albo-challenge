@@ -1,11 +1,5 @@
 package me.angelgladin.data
 
-/**
- * A generic class that holds a value with its loading status.
- *
- * Result is usually created by the Repository classes where they return
- * `LiveData<Result<T>>` to pass back the latest data to the UI with its fetch status.
- */
 
 data class Result<out T>(val status: Status, val data: T?, val message: String?) {
 

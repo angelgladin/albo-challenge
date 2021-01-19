@@ -14,7 +14,7 @@ import me.angelgladin.databinding.DetailFragmentBinding
 
 class DetailFragment : Fragment() {
 
-    val args: DetailFragmentArgs by navArgs()
+    private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,6 +40,5 @@ class DetailFragment : Fragment() {
             }
         }
     }
-
 
 }
