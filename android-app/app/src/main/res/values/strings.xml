@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Albo Challenge</string>
+    <string name="main_fragment_title">Beers</string>
 </resources>

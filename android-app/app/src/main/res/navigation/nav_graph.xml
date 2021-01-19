@@ -7,10 +7,14 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="me.angelgladin.master.ui.MasterFragment"
-        android:label="Beers">
+        android:label="@string/main_fragment_title">
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
