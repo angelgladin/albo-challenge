@@ -28,10 +28,17 @@ class BeerAdapter :
             holder.apply {
                 bind(
                     {
-                        // TODO: pasar todos los campos de beer al direction
-                        val direction =
-                            MasterFragmentDirections.actionMainFragmentToDetailFragment()
-                        it.findNavController().navigate(direction)
+                        with(beer) {
+                            val direction =
+                                MasterFragmentDirections.actionMainFragmentToDetailFragment(
+                                    name,
+                                    image_url,
+                                    tagLine,
+                                    description,
+                                    firstBrewed
+                                )
+                            it.findNavController().navigate(direction)
+                        }
                     },
                     beer
                 )
