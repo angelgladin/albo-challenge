@@ -1,6 +1,7 @@
 package me.angelgladin.master.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,29 +32,20 @@ class MasterFragment : Fragment() {
 
         subscribeUi(binding, adapter)
         setHasOptionsMenu(true)
+
         return binding.root
     }
 
     private fun subscribeUi(binding: MasterFragmentBinding, adapter: BeerAdapter) {
+        binding.swipeRefresh.setOnRefreshListener {
+            viewModel.refresh()
+        }
+
         viewModel.beers.observe(viewLifecycleOwner, {
-            /*
-        when (it.status) {
-            Result.Status.SUCCESS -> {
-                Log.e("ssss", it.toString())
-                it.data?.let { adapter.submitList(it) }
-            }
-            Result.Status.ERROR -> {
-                Log.e("eeee", it.toString())
 
-            }
-            Result.Status.LOADING -> {
-                Log.e("llll", it.toString())
-
-
-            }
-
-             */
             adapter.submitList(it!!)
+            Log.e("MasterFragment", it!!.toString())
+            binding.swipeRefresh.isRefreshing = false
         })
     }
 

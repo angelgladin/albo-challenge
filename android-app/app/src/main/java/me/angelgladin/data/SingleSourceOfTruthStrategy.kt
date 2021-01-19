@@ -23,7 +23,7 @@ fun <T, A> resultLiveData(databaseQuery: () -> LiveData<T>,
             emitSource(source)
 
             val responseStatus = networkCall.invoke()
-            Log.e("sdfsdf", responseStatus.toString())
+            //Log.e("sdfsdf", responseStatus.toString())
             if (responseStatus.status == Result.Status.SUCCESS) {
                 saveCallResult(responseStatus.data!!)
             } else if (responseStatus.status == Result.Status.ERROR) {

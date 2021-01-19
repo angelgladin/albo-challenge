@@ -10,7 +10,7 @@ import me.angelgladin.data.entity.Beer
 @Dao
 interface BeerDao {
     @Query("SELECT * FROM beer")
-    fun getBeers(): LiveData<List<Beer>>
+    fun getBeers(): List<Beer>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(beers: List<Beer>)

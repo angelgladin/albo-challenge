@@ -1,6 +1,7 @@
 package me.angelgladin.master.data
 
 import android.util.Log
+import androidx.lifecycle.map
 import androidx.paging.PageKeyedDataSource
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
@@ -47,7 +48,9 @@ class BeerPageDataSource @Inject constructor(
                 val results = response.data!!
                 dao.insertAll(results)
                 callback(results)
-            } else if (response.status == Status.SUCCESS) {
+            } else if (response.status == Status.ERROR) {
+                val source = dao.getBeers()
+                callback(source)
                 postError(response.message!!)
             }
         }
